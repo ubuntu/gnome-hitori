@@ -1,21 +1,7 @@
-# How to use this template repository
+# gnome-hitori
 
-This is a template repository, meant to be copied to start a skeleton of other projects. This template provides a few things:
-- build workflow so that a snap is built automatically when a Pull Request (PR) is opened
-- PR template
-- README.md skeleton
-
-A bit about the README.md below:
-- Delete everything in this "How to use this template repository" (everything above the ==== line). 
-- Replace hitori with the name of the snap (ex. hitori).
-- Update any section starting with "TODO" to add the info requested, and remove the TODO line.
-
-========================================================================================
-# hitori
-
-TODO: Add links to badges. Here's the hitori badge links for example:
-*[![hitori](https://snapcraft.io/hitori/badge.svg)](https://snapcraft.io/hitori)
-[![hitori](https://snapcraft.io/hitori/trending.svg?name=0)](https://snapcraft.io/hitori)*
+*[![gnome-hitori](https://snapcraft.io/gnome-hitori/badge.svg)](https://snapcraft.io/gnome-hitori)
+[![gnome-hitori](https://snapcraft.io/gnome-hitori/trending.svg?name=0)](https://snapcraft.io/gnome-hitori)*
 
 Below you will find some instructions to help you contribute to this snap. The general workflow will be to submit PRs from your fork onto the "stable" branch. Once the pull request has been *submitted*, there is a GitHub action that will automatically launch a build of the snap that you can use for testing. And then once the PR has been *merged* the GitHub action will launch a build on launchpad that will be automatically uploaded to the snap store, in the candidate channel, for more extensive testing.
 
@@ -30,7 +16,7 @@ Here is the workflow for submitting a change to the stable branch, and getting i
 
 ```
 git remote rename origin myfork
-git remote add ubuntu https://github.com/ubuntu/hitori.git
+git remote add ubuntu https://github.com/ubuntu/gnome-hitori.git
 git fetch --all
 ```
 
