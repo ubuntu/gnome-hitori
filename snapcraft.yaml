@@ -38,6 +38,7 @@ parts:
   gnome-hitori:
     source: https://gitlab.gnome.org/GNOME/hitori.git
     source-type: git
+    source-tag: '3.38.2'
     plugin: meson
     # workaround the issue described in https://launchpad.net/bugs/1583250
     meson-parameters: [--prefix=/snap/gnome-hitori/current/usr]
