@@ -42,6 +42,7 @@ parts:
     plugin: meson
     # workaround the issue described in https://launchpad.net/bugs/1583250
     meson-parameters: [--prefix=/snap/gnome-hitori/current/usr]
+    meson-version: 0.58.1
     organize:
       snap/gnome-hitori/current/usr: usr
     override-pull: |
