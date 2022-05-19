@@ -38,9 +38,7 @@ parts:
     source-type: git
     source-tag: '3.38.4'
     plugin: meson
-    # workaround the issue described in https://launchpad.net/bugs/1583250
-    meson-parameters: [--prefix=/snap/gnome-hitori/current/usr]
-    meson-version: 0.58.1
+    meson-parameters: [--prefix=/usr]
     organize:
       snap/gnome-hitori/current/usr: usr
     override-pull: |
