@@ -45,4 +45,4 @@ parts:
       snapcraftctl build
       mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui/
       cp ../src/data/icons/scalable/org.gnome.Hitori.svg $SNAPCRAFT_PART_INSTALL/meta/gui/
-      cp ../install/snap/gnome-hitori/current/usr/share/applications/org.gnome.Hitori.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp data/org.gnome.Hitori.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
