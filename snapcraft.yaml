@@ -26,11 +26,7 @@ apps:
     command: usr/bin/hitori
     extensions: [gnome-3-38]
     common-id: org.gnome.Hitori
-    environment:
-      GSETTINGS_SCHEMA_DIR: $SNAP/share/glib-2.0/schemas
     desktop: usr/share/applications/org.gnome.Hitori.desktop
-    environment:
-      GSETTINGS_SCHEMA_DIR: $SNAP/share/glib-2.0/schemas
 
 parts:
   gnome-hitori:
