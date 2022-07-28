@@ -12,7 +12,7 @@ description: |
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
-base: core20
+base: core22
 
 slots:
   # for GtkApplication registration
@@ -21,10 +21,14 @@ slots:
     bus: session
     name: org.gnome.Hitori
 
+layout:
+  /usr/share/help:
+    symlink: $SNAP/usr/share/help
+
 apps:
   gnome-hitori:
     command: usr/bin/hitori
-    extensions: [gnome-3-38]
+    extensions: [ gnome ]
     common-id: org.gnome.Hitori
     desktop: usr/share/applications/org.gnome.Hitori.desktop
 
@@ -34,15 +38,17 @@ parts:
     source-type: git
     source-tag: '3.38.4'
     plugin: meson
-    meson-parameters: [--prefix=/usr]
-    organize:
-      snap/gnome-hitori/current/usr: usr
+    parse-info: [usr/share/metainfo/org.gnome.Hitori.appdata.xml]
+    meson-parameters:
+      - --prefix=/usr
     override-pull: |
-      snapcraftctl pull
-      snapcraftctl set-version $(git describe --tags --abbrev=10)
+      craftctl default
+      craftctl set version=$(git describe --tags --abbrev=10)
     override-build: |
-      sed -i.bak -e 's|=org.gnome.Hitori$|=${SNAP}/meta/gui/org.gnome.Hitori.svg|g' $SNAPCRAFT_PART_SRC/data/org.gnome.Hitori.desktop.in
-      snapcraftctl build
-      mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui/
-      cp ../src/data/icons/scalable/org.gnome.Hitori.svg $SNAPCRAFT_PART_INSTALL/meta/gui/
-      cp data/org.gnome.Hitori.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
+      sed -i.bak -e 's|=org.gnome.Hitori$|=${SNAP}/meta/gui/org.gnome.Hitori.svg|g' $CRAFT_PART_SRC/data/org.gnome.Hitori.desktop.in
+      craftctl default
+      mkdir -p $CRAFT_PART_INSTALL/meta/gui/
+      cp ../src/data/icons/scalable/org.gnome.Hitori.svg $CRAFT_PART_INSTALL/meta/gui/
+      cp data/org.gnome.Hitori.desktop $CRAFT_PART_INSTALL/meta/gui/
+    build-packages:
+      - libc6-dev
