@@ -50,5 +50,3 @@ parts:
       mkdir -p $CRAFT_PART_INSTALL/meta/gui/
       cp ../src/data/icons/scalable/org.gnome.Hitori.svg $CRAFT_PART_INSTALL/meta/gui/
       cp data/org.gnome.Hitori.desktop $CRAFT_PART_INSTALL/meta/gui/
-    build-packages:
-      - libc6-dev
