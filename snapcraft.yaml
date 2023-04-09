@@ -36,7 +36,7 @@ parts:
   gnome-hitori:
     source: https://gitlab.gnome.org/GNOME/hitori.git
     source-type: git
-    source-tag: '3.38.4'
+    source-tag: '44.0'
     plugin: meson
     parse-info: [usr/share/metainfo/org.gnome.Hitori.appdata.xml]
     meson-parameters:
